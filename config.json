@@ -1,0 +1,29 @@
+{
+	"inbound": {
+    	"port": 50024,		// 监听端口号，建议更改
+    	"protocol": "vmess",	// 通信协议，建议vmess
+    	"settings": {
+			"clients": [
+        		{
+	    			"id": "54f0f20d-7ff9-4dbd-ada0-fa1e27622d85",	// UUID识别码，建议使用V2Ray(客户端)重新生成
+            		"level": 1,
+            		"alterId": 64
+        		}
+			]
+		}
+  	},
+  	"streamSettings": {
+	  	"network": "tcp"
+  	},
+  	"outbound": {
+    	"protocol": "freedom",
+    	"settings": {}
+  	},
+  	"outboundDetour": [
+		{
+			"protocol": "blackhole",
+      		"settings": {},
+      		"tag": "blocked"
+    	}
+  	]
+}
